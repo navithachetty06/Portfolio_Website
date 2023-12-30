@@ -5,7 +5,8 @@ from django.db import models
 class About(models.Model):
     short_description = models.TextField()
     description = models.TextField()
-    image = models.ImageField(upload_to="about")
+    pdf_file = models.FileField(upload_to="pdfs/", default="default_cv.pdf")
+    image = models.ImageField(upload_to="images/")
 
     class Meta:
         verbose_name = "About me"
@@ -41,3 +42,14 @@ class Client(models.Model):
 
     def __str__(self):
         return self.name
+    
+# Modify your models.py to include project details
+class Project(models.Model):
+    title = models.CharField(max_length=100, verbose_name="Project title")
+    description = models.TextField(verbose_name="Project description")
+    image = models.ImageField(upload_to="project_images/")
+    # Add any additional fields you need, such as project URL, technologies used, etc.
+
+    def __str__(self):
+        return self.title
+
