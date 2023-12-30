@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div id="home" class="banner-area section-padding">
+        <div class="bg-overlay black"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="welcome-text">
+                        <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Creative and Innovative application</div>
+                        <h1 class="wow fadeInDown" data-wow-delay="0.4s">Hello, my name is Naralachetty Navitha</h1>
+                        <a href="#about" class="my-btn-1 wow fadeInDown" data-wow-delay="0.6s">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# About section #}
+
+    <div id="about" class="about-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sn-8 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-left">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="line"></div>
+                        <h4>Navitha's Journey</h4>
+                        <p style="text-align: justify";>Navitha's journey in computer science began in Hyderabad, India, where she earned her Bachelor's degree in Computer Science and Engineering from Teegala Krishna Reddy Engineering College. She then moved to Milwaukee, Wisconsin, to pursue a Master of Science in Computer Science at the University of Wisconsin Milwaukee. Navitha's journey in machine learning and artificial intelligence is marked by her involvement in advanced projects and certifications. She has worked on projects like "Natural Language Inference Using BERT," where she implemented and trained models using the SNLI corpus to estimate similarities between sentences. Another notable project was the "Hybrid Cryptography Approach for providing Advanced Security on Cloud," focusing on securing cloud data. Her expertise is further validated by her AWS Certified Machine Learning Specialty certification, demonstrating her proficiency and continuous learning in this cutting-edge field.</p>
+
+                    </div>
+                </div>
+                <div class="col-md-5 visible-md visible-lg wow fadeInDown" data-wow-delay="0.6s">
+                    <div class="profile">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Projects Section #}
+    <div id="portfolio" class="portfolio-area section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header">
+                        <h2>My Projects</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for work in works %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                        <div class="gallery-items">
+                            <img src="{{ work.image.url }}" alt="work image">
+                            <div class="gallery-text">
+                                <h2>{{ work.title }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
