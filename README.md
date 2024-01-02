@@ -1,4 +1,4 @@
-# Portfolio Website - Navitha's Personal Portfolio
+# Portfolio Website - Personal Portfolio
 
 Welcome to my personal portfolio website! This website serves as a showcase of my skills, projects, and experiences in the field of computer science and software development.
 
