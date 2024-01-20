@@ -37,7 +37,3 @@ Access the website in your web browser at http://localhost:8000.
 Contributing
 If you'd like to contribute to this project or report issues, please feel free to open a GitHub issue or submit a pull request. Contributions are welcome!
 
-License
-This project is licensed under the MIT License.
-
-Feel free to customize the README to include any additional information or sections that are relevant to your portfolio website. You can also provide specific instructions on how to set up and deploy your website if you want others to be able to use or contribute to it.
